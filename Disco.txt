@@ -115,7 +115,7 @@ function DiscordLib:Window(text)
 	MainFrame.Name = "MainFrame"
 	MainFrame.Parent = Discord
 	MainFrame.AnchorPoint = Vector2.new(0.5, 0.5)
-	MainFrame.BackgroundColor3 = Color3.fromRGB(109, 109, 242)
+	MainFrame.BackgroundColor3 = Color3.fromRGB(109, 142, 234)
 	MainFrame.BorderSizePixel = 0
 	MainFrame.ClipsDescendants = true
 	MainFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
@@ -123,7 +123,7 @@ function DiscordLib:Window(text)
 
 	TopFrame.Name = "TopFrame"
 	TopFrame.Parent = MainFrame
-	TopFrame.BackgroundColor3 = Color3.fromRGB(74, 74, 199)
+	TopFrame.BackgroundColor3 = Color3.fromRGB(32, 34, 37)
 	TopFrame.BackgroundTransparency = 1.000
 	TopFrame.BorderSizePixel = 0
 	TopFrame.Position = UDim2.new(-0.000658480625, 0, 0, 0)
@@ -151,7 +151,7 @@ function DiscordLib:Window(text)
 
 	CloseBtn.Name = "CloseBtn"
 	CloseBtn.Parent = TopFrame
-	CloseBtn.BackgroundColor3 = Color3.fromRGB(32, 34, 37)
+	CloseBtn.BackgroundColor3 = Color3.fromRGB(32, 34, 37) 
 	CloseBtn.BackgroundTransparency = 0
 	CloseBtn.Position = UDim2.new(0.959063113, 0, -0.0169996787, 0)
 	CloseBtn.Size = UDim2.new(0, 28, 0, 22)
@@ -164,7 +164,7 @@ function DiscordLib:Window(text)
 
 	CloseIcon.Name = "CloseIcon"
 	CloseIcon.Parent = CloseBtn
-	CloseIcon.BackgroundColor3 = Color3.fromRGB (72, 95, 89, 0.4)
+	CloseIcon.BackgroundColor3 = Color3.fromRGB (77, 77, 232) 
 	CloseIcon.BackgroundTransparency = 1.000
 	CloseIcon.Position = UDim2.new(0.189182192, 0, 0.128935531, 0)
 	CloseIcon.Size = UDim2.new(0, 17, 0, 17)
@@ -186,13 +186,12 @@ function DiscordLib:Window(text)
 
 	MinimizeIcon.Name = "MinimizeLabel"
 	MinimizeIcon.Parent = MinimizeBtn
-	MinimizeIcon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	MinimizeIcon.BackgroundColor3 = Color3.fromRGB(74, 79, 90)
 	MinimizeIcon.BackgroundTransparency = 1.000
 	MinimizeIcon.Position = UDim2.new(0.189182192, 0, 0.128935531, 0)
 	MinimizeIcon.Size = UDim2.new(0, 17, 0, 17)
 	MinimizeIcon.Image = "http://www.roblox.com/asset/?id=6035067836"
-	MinimizeIcon.ImageColor3 = Color3.fromRGB (115, 105, 194)
-
+	MinimizeIcon.ImageColor3 = Color3.fromRGB (115, 105, 194) 
 	ServersHolder.Name = "ServersHolder"
 	ServersHolder.Parent = TopFrameHolder
 
