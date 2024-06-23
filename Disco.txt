@@ -1,22 +1,3 @@
-local DiscordLib = {}
-local UserInputService = game:GetService("UserInputService")
-local TweenService = game:GetService("TweenService")
-local RunService = game:GetService("RunService")
-local LocalPlayer = game:GetService("Players").LocalPlayer
-local Mouse = LocalPlayer:GetMouse()
-local HttpService = game:GetService("HttpService")
-local pfp
-local user
-local tag
-local userinfo = {}
-
-pcall(function()
-	userinfo = HttpService:JSONDecode(readfile("discordlibinfo.txt"));
-end)
-
-pfp = userinfo["pfp"] or "https://www.roblox.com/headshot-thumbnail/image?userId=".. game.Players.LocalPlayer.UserId .."&width=420&height=420&format=png"
-user =  userinfo["user"] or game.Players.LocalPlayer.Name
-tag = userinfo
 
 local function SaveInfo()
 	userinfo["pfp"] = pfp
@@ -115,7 +96,7 @@ function DiscordLib:Window(text)
 	MainFrame.Name = "MainFrame"
 	MainFrame.Parent = Discord
 	MainFrame.AnchorPoint = Vector2.new(0.5, 0.5)
-	MainFrame.BackgroundColor3 = Color3.fromRGB(109, 142, 234)
+	MainFrame.BackgroundColor3 = Color3.fromRGB(32, 34, 37)
 	MainFrame.BorderSizePixel = 0
 	MainFrame.ClipsDescendants = true
 	MainFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
@@ -131,7 +112,7 @@ function DiscordLib:Window(text)
 	
 	TopFrameHolder.Name = "TopFrameHolder"
 	TopFrameHolder.Parent = TopFrame
-	TopFrameHolder.BackgroundColor3 = Color3.fromRGB(72, 89, 90, 0.4)
+	TopFrameHolder.BackgroundColor3 = Color3.fromRGB(32, 34, 37)
 	TopFrameHolder.BackgroundTransparency = 1.000
 	TopFrameHolder.BorderSizePixel = 0
 	TopFrameHolder.Position = UDim2.new(-0.000658480625, 0, 0, 0)
@@ -151,7 +132,7 @@ function DiscordLib:Window(text)
 
 	CloseBtn.Name = "CloseBtn"
 	CloseBtn.Parent = TopFrame
-	CloseBtn.BackgroundColor3 = Color3.fromRGB(32, 34, 37) 
+	CloseBtn.BackgroundColor3 = Color3.fromRGB(32, 34, 37)
 	CloseBtn.BackgroundTransparency = 0
 	CloseBtn.Position = UDim2.new(0.959063113, 0, -0.0169996787, 0)
 	CloseBtn.Size = UDim2.new(0, 28, 0, 22)
@@ -164,16 +145,16 @@ function DiscordLib:Window(text)
 
 	CloseIcon.Name = "CloseIcon"
 	CloseIcon.Parent = CloseBtn
-	CloseIcon.BackgroundColor3 = Color3.fromRGB (67, 77, 232) 
+	CloseIcon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	CloseIcon.BackgroundTransparency = 1.000
 	CloseIcon.Position = UDim2.new(0.189182192, 0, 0.128935531, 0)
 	CloseIcon.Size = UDim2.new(0, 17, 0, 17)
 	CloseIcon.Image = "http://www.roblox.com/asset/?id=6035047409"
-	CloseIcon.ImageColor3 = Color3.fromRGB(77, 77, 232)
+	CloseIcon.ImageColor3 = Color3.fromRGB(220, 221, 222)
 
 	MinimizeBtn.Name = "MinimizeButton"
 	MinimizeBtn.Parent = TopFrame
-	MinimizeBtn.BackgroundColor3 = Color3.fromRGB(95, 105, 194)
+	MinimizeBtn.BackgroundColor3 = Color3.fromRGB(32, 34, 37)
 	MinimizeBtn.BackgroundTransparency = 0
 	MinimizeBtn.Position = UDim2.new(0.917947114, 0, -0.0169996787, 0)
 	MinimizeBtn.Size = UDim2.new(0, 28, 0, 22)
@@ -186,18 +167,19 @@ function DiscordLib:Window(text)
 
 	MinimizeIcon.Name = "MinimizeLabel"
 	MinimizeIcon.Parent = MinimizeBtn
-	MinimizeIcon.BackgroundColor3 = Color3.fromRGB(74, 79, 90)
+	MinimizeIcon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	MinimizeIcon.BackgroundTransparency = 1.000
 	MinimizeIcon.Position = UDim2.new(0.189182192, 0, 0.128935531, 0)
 	MinimizeIcon.Size = UDim2.new(0, 17, 0, 17)
 	MinimizeIcon.Image = "http://www.roblox.com/asset/?id=6035067836"
-	MinimizeIcon.ImageColor3 = Color3.fromRGB (115, 105, 194) 
+	MinimizeIcon.ImageColor3 = Color3.fromRGB(220, 221, 222)
+
 	ServersHolder.Name = "ServersHolder"
 	ServersHolder.Parent = TopFrameHolder
 
 	Userpad.Name = "Userpad"
 	Userpad.Parent = TopFrameHolder
-	Userpad.BackgroundColor3 = Color3.fromRGB(86, 86, 232)
+	Userpad.BackgroundColor3 = Color3.fromRGB(41, 43, 47)
 	Userpad.BorderSizePixel = 0
 	Userpad.Position = UDim2.new(0.106243297, 0, 15.9807148, 0)
 	Userpad.Size = UDim2.new(0, 179, 0, 43)
@@ -670,7 +652,8 @@ function DiscordLib:Window(text)
 	SearchIcoFrame.Position = UDim2.new(0.657999992, 0, 0, 0)
 	SearchIcoFrame.Size = UDim2.new(0, 20, 0, 20)
 
-	SearchIcoFrameCorner.CornerRadius = UDim.new(1, 8)
+	SearchIcoFrameCorner.CornerRadius
+
 	SearchIcoFrameCorner.Name = "SearchIcoFrameCorner"
 	SearchIcoFrameCorner.Parent = SearchIcoFrame
 
